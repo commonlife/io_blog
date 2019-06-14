@@ -1,0 +1,4 @@
+baseURL = "https://commonlife.github.io/"
+languageCode = "ko-kr"
+title = "비오는 숲"
+theme = "ananke"
