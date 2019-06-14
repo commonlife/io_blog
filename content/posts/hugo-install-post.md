@@ -11,7 +11,7 @@ tags: ["hugo", "go", "golang", "github", "github.io"]
 # 준비
 - github에 repository를 생성한다.
 	- hugo new site 로 만든 디렉토리가 담길 repository : 이름은 원하는대로
-	- <username>.github.io 라는 이름으로 만든 repository : repository 이름이 url 주소가 된다.
+	- {username}.github.io 라는 이름으로 만든 repository : repository 이름이 url 주소가 된다.
 - mac에 hugo를 설치한다.
 	- brew install hugo
 	- 다른 방법도 있지만 생략한다. 그 중 직접 코드를 빌드해서 사용해보고 싶다면 golang 개발 환경 설정 및 부가적인 요소가 필요하다. [hugo github](https://github.com/gohugoio/hugo)
