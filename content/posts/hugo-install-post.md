@@ -30,7 +30,7 @@ tags: ["hugo", "go", "golang", "github", "github.io"]
 ### 1. 사이트를 만든다.
 여기선 blog라는 이름으로 예를 들어보겠다.
 
->$ hugo new site blog
+> $ hugo new site blog
 
 ```
 blog
@@ -59,9 +59,32 @@ themes 디렉토리 아래 다운받은 themes 파일들이 있다. 그리고 th
 
 [https://themes.gohugo.io/](https://themes.gohugo.io/)
 
+##### git : themes를 submodule로 추가하기
+프로젝트의 root 디렉토리에서
+
+1. git init
+1. git submodule add https://github.com/budparr/gohugo-theme-ananke.git themes/{theme 이름}
+
+##### git : 다른 PC에서 themes를 submodule로 불러오기
+일단 프로젝트는 clone을 한 상태이며 프로젝트 root 디렉토리에 있다.
+
+1. git submodule init
+1. git submodule update
+
+##### git : submodule 삭제하기
+프로젝트의 root 디렉토리
+
+1. vi .gitmodules : 파일을 열어 삭제할 모듈들을 삭제
+2. git rm --cached {submodule 이름} : .gitmodules에 있던 이름
+3. git submodule deinit {submodule path}
+4. rm -rf .git/modules/{submodule 이름}
+5. commit & push
+
+note : 프로젝트 전체를 clone한 후 submodule들을 업데이트하여 다운로드 받아야 삭제가 가능하다.
+
 ### 3. 글을 만든다.
 
->$ hugo new posts/first-post.md
+> $ hugo new posts/first-post.md
 
 ```
 blog
