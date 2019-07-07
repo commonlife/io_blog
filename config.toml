@@ -3,46 +3,39 @@ languageCode = "ko-kr"
 title = "비오는 숲"
 
 #####################
-# https://themes.gohugo.io/hugo-theme-terminal/
-# git submodule add https://github.com/panr/hugo-theme-terminal.git themes/terminal
-theme = "terminal"
+theme = "mainroad"
 paginate = 10
 
-[params]
-  # dir name of your blog content (default is `content/posts`)
-  contentTypeName = "posts"
-  # ["orange", "blue", "red", "green", "pink"]
-  themeColor = "orange"
-  # if you set this to 0, only submenu trigger will be visible
-  showMenuItems = 0
-  # set theme to full screen width
-  fullWidthTheme = false
-  # center theme with default width
-  centerTheme = false
-  # set a custom favicon (default is a `themeColor` square)
-  # favicon = "favicon.ico"
 
-[languages]
-  [languages.en]
-    #title = "Terminal"
-    #subtitle = "A simple, retro theme for Hugo"
-    title = "비오는 숲"
-    keywords = ""
-    copyright = ""
-    menuMore = "Show more"
-    readMore = "Read more"
-    readOtherPosts = "Read other posts"
+#[Author] # Used in authorbox
+#  name = "John Doe"
+#  bio = "John Doe's true identity is unknown. Maybe he is a successful blogger or writer. Nobody knows it."
+#  avatar = "img/avatar.png"
 
-    [languages.en.params.logo]
-      logoText = "비오는 숲"
-      logoHomeLink = "https://commonlife.github.io/"
+[Params]
+#  subtitle = "Just another site" # Subtitle of your site. Used in site header
+#  description = "John Doe's Personal blog about everything" # Site description. Used in meta description
+  #copyright = "John Doe" # copyright holder, otherwise will use site title
+  readmore = false # Show "Read more" button in list if true
+  authorbox = false # Show authorbox at bottom of pages if true
+  toc = true # Enable Table of Contents
+  post_navigation = true # Show post navigation at bottom of pages if true
+  post_meta = ["date", "categories", "translations"] # Order of post meta information
+  #mainSections = ["post", blog", "news"] # specify section pages to show on home page and the "Recent articles" widget
+  #dateformat = "2006-01-02" # change the format of dates
+  #mathjax = true # Enable MathJax
+  #mathjaxPath = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" # Specify MathJax path
+  #mathjaxConfig = "TeX-AMS-MML_HTMLorMML" # Specify MathJax config
+  #highlightColor = "#e22d30" # Override highlight color
+  customCSS = ["css/custom.css"] # Include custom CSS files
 
-#    [languages.en.menu]
-#      [[languages.en.menu.main]]
-#        identifier = "about"
-#        name = "About"
-#        url = "/about"
-#      [[languages.en.menu.main]]
-#        identifier = "showcase"
-#        name = "Showcase"
-#        url = "/showcase"
+[Params.sidebar]
+  home = "right" # Configure layout for home page
+  list = "left"  # Configure layout for list pages
+  single = false # Configure layout for single pages
+  # Enable widgets in given order
+  widgets = ["search", "recent", "categories", "taglist", "social", "languages"]
+
+[Params.widgets]
+  recent_num = 5 # Set the number of articles in the "Recent articles" widget
+  tags_counter = true # Enable counter for each tag in "Tags" widget (disabled by default)
